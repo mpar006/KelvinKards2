@@ -4,6 +4,9 @@ import {Form, Item, Label} from 'native-base';
 import {LoadingButton} from '../../src/Components';
 
 class LoginScreen extends React.Component {
+  static navigationOptions =  {
+    header: null,
+  };
 
   render() {
     return (
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingLeft: 40,
     paddingRight: 40,
-    paddingTop: 80
+    paddingTop: 140
   },
 
   titleStyle: {

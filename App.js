@@ -9,12 +9,6 @@ const RootStack = createStackNavigator(
 },
 {
   initialRouteName: 'Login',
-  navigationOptions: {
-    headerMode: 'none',
-    navigationOptions: {
-      headerVisible: false
-    }
-  }
 }
 );
 
