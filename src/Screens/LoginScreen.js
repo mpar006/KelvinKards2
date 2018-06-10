@@ -3,7 +3,7 @@ import {Text, StyleSheet, TextInput} from 'react-native';
 import {Form, Item, Label} from 'native-base';
 import {LoadingButton} from '../../src/Components';
 
-class HomeScreen extends React.Component {
+class LoginScreen extends React.Component {
 
   static navigationOptions = {
     headerMode: 'none',
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {HomeScreen}
+export {LoginScreen}
