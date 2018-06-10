@@ -3,17 +3,17 @@ import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {HomeScreen} from "../../src/Screens/HomeScreen";
 import {Text} from 'react-native';
+import {LoadingButton} from '../../src/Components';
 
 configure({adapter: new Adapter()});
 
-describe('Guess It App', () => {
+describe('HomeScreen', () => {
   let wrapper;
 
-  describe('onListen', () => {
-    it('should render title', () => {
-      wrapper = shallow(<HomeScreen/>);
-      expect(wrapper.find(Text).props().children).toEqual('KelvinKards2.0');
-    })
+  it('should render title and button', () => {
+    wrapper = shallow(<HomeScreen/>);
+    expect(wrapper.find(Text).props().children).toEqual('KelvinKards2.0');
+    expect(wrapper.find(LoadingButton).length).toEqual(1);
   });
 
 });
