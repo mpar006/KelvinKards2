@@ -1,9 +1,17 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
-import {Form, Item, Container} from 'native-base';
+import {Text, StyleSheet, TextInput} from 'react-native';
+import {Form, Item, Label} from 'native-base';
 import {LoadingButton} from '../../src/Components';
 
 class HomeScreen extends React.Component {
+
+  static navigationOptions = {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    }
+  };
+
   render() {
     return (
     <Form style={styles.formStyle}>
@@ -13,6 +21,16 @@ class HomeScreen extends React.Component {
       style={styles.titleStyle}>
         KelvinKards2.0
       </Text>
+
+      <Item floatingLabel last style={styles.textFieldStyle}>
+        <Label>Username</Label>
+        <TextInput />
+      </Item>
+
+      <Item floatingLabel last style={styles.textFieldStyle}>
+        <Label>Password</Label>
+        <TextInput />
+      </Item>
 
       <LoadingButton
       style={styles.buttonStyle}
@@ -28,11 +46,11 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   formStyle: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     paddingLeft: 40,
-    paddingRight: 40
+    paddingRight: 40,
+    paddingTop: 80
   },
 
   titleStyle: {
@@ -43,7 +61,11 @@ const styles = StyleSheet.create({
 
   buttonStyle: {
     alignItems: 'center'
-  }
+  },
+
+  textFieldStyle: {
+    marginBottom: 10
+  },
 });
 
 export {HomeScreen}

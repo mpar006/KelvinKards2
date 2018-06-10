@@ -12,7 +12,7 @@ const LoadingButton = ({loading, onPress, children}) => {
     );
   }
   return (
-  <Button rounded style={styles.buttonStyle} onPress={onPress}>
+  <Button style={styles.buttonStyle} onPress={onPress}>
     <Text
     style={styles.textStyle}>
       {children}
