@@ -5,13 +5,6 @@ import {LoadingButton} from '../../src/Components';
 
 class LoginScreen extends React.Component {
 
-  static navigationOptions = {
-    headerMode: 'none',
-    navigationOptions: {
-      headerVisible: false,
-    }
-  };
-
   render() {
     return (
     <Form style={styles.formStyle}>
@@ -35,7 +28,7 @@ class LoginScreen extends React.Component {
       <LoadingButton
       style={styles.buttonStyle}
       loading={false}
-      onPress={undefined}>
+      onPress={() => {this.props.navigation.navigate('Home')}}>
         Login
       </LoadingButton>
     </Form>

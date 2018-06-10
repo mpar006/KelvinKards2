@@ -10,7 +10,7 @@ configure({adapter: new Adapter()});
 describe('LoginScreen', () => {
   let wrapper;
 
-  it('should render title and button', () => {
+  it('should render title, text fields and button', () => {
     wrapper = shallow(<LoginScreen/>);
     expect(wrapper.find(Text).props().children).toEqual('KelvinKards2.0');
     expect(wrapper.find(LoadingButton).length).toEqual(1);
