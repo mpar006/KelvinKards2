@@ -19,6 +19,7 @@ describe('LoadingButton', () => {
     );
 
     expect(wrapper.find(Text).props().children).toEqual('Login');
+    expect(wrapper.find(ActivityIndicator).length).toEqual(0);
   });
 
   it('should render a loading indicator when pass true for loading state', () => {
