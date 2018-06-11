@@ -1,11 +1,19 @@
 import React from 'react';
-import {Text, StyleSheet, TextInput} from 'react-native';
-import {Form, Item, Label} from 'native-base';
+import {Text, StyleSheet} from 'react-native';
+import {Form, Item, Label, Input} from 'native-base';
 import {LoadingButton} from '../../src/Components';
 
 class LoginScreen extends React.Component {
-  static navigationOptions =  {
+  static navigationOptions = {
     header: null,
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    };
   };
 
   render() {
@@ -20,18 +28,29 @@ class LoginScreen extends React.Component {
 
       <Item floatingLabel last style={styles.textFieldStyle}>
         <Label>Username</Label>
-        <TextInput />
+        <Input
+        onChangeText={(username) => this.setState({username})}
+        value={this.state.username}
+        />
       </Item>
 
       <Item floatingLabel last style={styles.textFieldStyle}>
         <Label>Password</Label>
-        <TextInput />
+        <Input
+        secureTextEntry
+        onChangeText={(password) => this.setState({password})}
+        value={this.state.password}
+        />
       </Item>
 
       <LoadingButton
       style={styles.buttonStyle}
       loading={false}
-      onPress={() => {this.props.navigation.navigate('Home')}}>
+      onPress={() => {
+        console.log(this.state.password);
+        console.log(this.state.username);
+        // this.props.navigation.navigate('Home')
+      }}>
         Login
       </LoadingButton>
     </Form>
