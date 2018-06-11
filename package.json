@@ -10,7 +10,11 @@
     "react": "16.3.1",
     "react-dom": "^16.4.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-27.0.0.tar.gz",
-    "react-navigation": "^2.2.5"
+    "react-navigation": "^2.2.5",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-mock-store": "^1.5.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "jest-expo": "^27.0.1"

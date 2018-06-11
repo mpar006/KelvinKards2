@@ -1,8 +1,12 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation';
+import {Provider} from 'react-redux';
+import firebase from 'firebase';
 import {LoginScreen, HomeScreen} from "./src/Screens";
 import {AuthConfig} from './src/Config/AuthConfig';
-import firebase from 'firebase';
+import configureStore from './src/Config/StoreConfig';
+
+const store = configureStore();
 
 const RootStack = createStackNavigator(
 {
@@ -21,7 +25,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-    <RootStack/>
+    <Provider store={store}>
+      <RootStack/>
+    </Provider>
     );
   }
 }

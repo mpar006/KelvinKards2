@@ -16,5 +16,4 @@ describe('LoginScreen', () => {
     expect(wrapper.find(LoadingButton).length).toEqual(1);
     expect(wrapper.find(TextInput).length).toEqual(2);
   });
-
 });

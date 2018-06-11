@@ -49,7 +49,6 @@ class LoginScreen extends React.Component {
       onPress={() => {
         console.log(this.state.password);
         console.log(this.state.username);
-        // this.props.navigation.navigate('Home')
       }}>
         Login
       </LoadingButton>
